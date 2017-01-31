@@ -6,7 +6,6 @@ body {
   background-color: #FFFFFF;
   margin: auto;
   padding-left: 12px;
-  padding-right: 12px;
   padding-top: 40px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12pt;
@@ -15,31 +14,64 @@ h2 {
   font-family: "Myriad Pro", sans-serif;
   font-size: 24pt;
   font-weight: bold;
+  margin-bottom: 14px;
 }
 h3 {
   font-size: 19pt;
+  padding-bottom: 16px;
 }
 .header {
   margin-bottom: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+#clarity {
+  top: 48px; /*distance from top of page*/
+  margin-left: 12px; /*distance from logo*/
+  position: absolute;
 }
 .topmenu {
   float: right;
+  top: 48px;
 }
-
 .topmenu > li {
   display: inline;
+  border-right: 1px solid black;
+  padding-right: 10px;
+  padding-left: 10px;
+  color: #666666;
+  font-size: 12pt;
 }
-
+.topmenu > li:last-child {
+    border-right: none;
+}
 .greybar {
   width: 950px;
   height: 42px;
-  background-color: #A4A4A4;
   margin-bottom: 12px;
+  background: #dfe0e0; /* Old browsers */
+  background: -moz-linear-gradient(top, #dfe0e0 0%, #7f7f7f 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #dfe0e0 0%,#7f7f7f 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(top, bottom, #dfe0e0 0%,#7f7f7f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 .bodycontent {
   width: 560px;
   padding-left: 44px;
+  margin-top: 46px;
+  margin-bottom: 26px;
   float: left;
+}
+p {
+  color: #666666;
+}
+.about {
+  padding-bottom: 40px;
+}
+#leftpic {
+  padding-right: 20px;
+}
+.employees{
+  padding-top: 18px;
 }
 .topbox {
   float: right;
@@ -53,6 +85,7 @@ h3 {
 }
 .social > li{
   display: inline;
+  padding-right: 6px;
 }
 .bottombox {
   float: right;
@@ -65,6 +98,35 @@ h3 {
   margin-top: 22px;
   clear: right;
 }
+.links {
+  color: #666666;
+}
+.links > li {
+  padding-bottom: 10px;
+}
 footer {
+  height: 40px;
+  width: 948px;
+  background-color: #E0E0E0;
   clear: both;
+  margin: auto;
+  padding-top: 16px;
+}
+.footerlinks {
+  text-align: center;
+  padding-bottom: 16px;
+}
+.footerlinks > li {
+  display: inline;
+  border-right: 1px solid black;
+  padding-right: 12px;
+  padding-left: 12px;
+}
+.footerlinks > li:last-child {
+    border-right: none;
+}
+
+.footerlinks a {
+  text-decoration: none;
+  color: black;
 }
