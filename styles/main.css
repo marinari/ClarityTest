@@ -30,21 +30,71 @@ h3 {
   margin-left: 12px; /*distance from logo*/
   position: absolute;
 }
+/* old CSS for navigation
 .topmenu {
   float: right;
   top: 48px;
 }
 .topmenu > li {
   display: inline;
-  border-right: 1px solid black;
+
+}
+
+}*/
+header {
+	background: #fff;
+	width: 100%;
+	height: 76px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+
+nav {
+	float: right;
+	padding: 20px;
+}
+
+#menu a{
+  text-decoration: none;
+  color: #A2A2A2;
+}
+
+#menu-icon {
+	display: hidden;
+  width: 40px;
+	height: 40px;
+	background: url('../images/menu-icon.png') center;
+}
+
+a:hover#menu-icon {
+	background-color: #FDD649;
+	border-radius: 4px 4px 0 0;
+}
+
+#menu ul {
+	list-style: none;
+}
+
+#menu li {
+	display: inline-block;
+	float: left;
+  border-right: 1px solid #A2A2A2;
   padding-right: 10px;
   padding-left: 10px;
   color: #666666;
   font-size: 12pt;
 }
-.topmenu > li:last-child {
+
+#menu > li:last-child {
     border-right: none;
 }
+
+.current { /*active nav page*/
+	color: black;
+}
+
 .greybar {
   width: 950px;
   height: 42px;
@@ -54,6 +104,7 @@ h3 {
   background: -webkit-linear-gradient(top, #dfe0e0 0%,#7f7f7f 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(top, bottom, #dfe0e0 0%,#7f7f7f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
+
 .bodycontent {
   width: 560px;
   padding-left: 44px;
@@ -61,18 +112,23 @@ h3 {
   margin-bottom: 26px;
   float: left;
 }
+
 p {
   color: #666666;
 }
+
 .about {
   padding-bottom: 40px;
 }
+
 #leftpic {
   padding-right: 20px;
 }
+
 .employees{
   padding-top: 18px;
 }
+
 .topbox {
   float: right;
   width: 240px;
@@ -83,10 +139,12 @@ p {
   padding-left: 16px;
   padding-top: 18px;
 }
+
 .social > li{
   display: inline;
   padding-right: 6px;
 }
+
 .bottombox {
   float: right;
   width: 240px;
@@ -98,12 +156,15 @@ p {
   margin-top: 22px;
   clear: right;
 }
+
 .links {
   color: #666666;
 }
+
 .links > li {
   padding-bottom: 10px;
 }
+
 footer {
   height: 40px;
   width: 948px;
@@ -112,17 +173,20 @@ footer {
   margin: auto;
   padding-top: 16px;
 }
+
 .footerlinks {
   text-align: center;
   padding-bottom: 16px;
 }
+
 .footerlinks > li {
   display: inline;
   border-right: 1px solid black;
   padding-right: 12px;
   padding-left: 12px;
 }
-.footerlinks > li:last-child {
+
+.footerlinks > li:last-child { /*remove right line on last list element*/
     border-right: none;
 }
 
@@ -130,3 +194,47 @@ footer {
   text-decoration: none;
   color: black;
 }
+
+/*MEDIA QUERY*/
+@media only screen and (max-width : 640px) {
+
+	header {
+
+		position: absolute;
+
+	}
+
+	#menu-icon {
+
+		display:inline-block;
+
+	}
+
+	nav ul, nav:active ul {
+
+		display: none;
+		position: absolute;
+		padding: 20px;
+		background: #fff;
+		border: 5px solid #444;
+		right: 20px;
+		top: 60px;
+		width: 50%;
+		border-radius: 4px 0 4px 4px;
+
+	}
+
+	nav li {
+
+		text-align: center;
+		width: 100%;
+		padding: 10px 0;
+		margin: 0;
+
+	}
+
+	nav:hover ul {
+
+		display: block;
+
+	}
